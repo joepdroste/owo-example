@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "owo-test",
+  "version": "${version}",
+  "name": "owo-test",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "unlicense",
+  "icon": "assets/owo-test/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.github.joepdroste.owoTest.client.OwoTestClient"
+    ],
+    "main": [
+      "com.github.joepdroste.owoTest.OwoTest"
+    ]
+  },
+  "mixins": [
+    "owo-test.mixins.json",
+    {
+      "config": "owo-test.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
